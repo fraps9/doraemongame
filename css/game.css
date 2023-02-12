@@ -1,0 +1,196 @@
+@import "reset.css";
+
+body,
+section,
+div,
+h1,
+img,
+button,
+p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin-top: 5px;
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  height: 100%;
+}
+.story {
+  background: url(../img/tbg.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+.story > .text {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.story > .tte {
+  width: 230px;
+  height: 320px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.story img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.story > .timer {
+  width: 61px;
+  height: 82px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  overflow: hidden;
+}
+.play {
+  background: url(../img/doraemon_bg5.png) no-repeat center bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+.play_area {
+  margin: 40px 20px;
+  height: calc(100% - 360px);
+  clear: both;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.play_area > div {
+  width: 30%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+.play_area > div > .doraemon {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  bottom: 20%;
+  left: 0;
+  overflow: hidden;
+}
+.play_area > div > .doraemon img {
+  width: 100%;
+  height: auto;
+  transition: all 0.4s;
+  position: relative;
+  bottom: -100%;
+}
+.play_area > div > .doraemon img.active {
+  display: block;
+  bottom: -20%;
+}
+.play_area > div > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  background: url(../img/draemon_j.png) no-repeat bottom;
+  background-size: contain;
+  z-index: 999;
+}
+.play > .score {
+  width: 100px;
+  height: 57px;
+  margin: 20px 0 0 20px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: #0069b7;
+  background: url(../img/catch_dm.png) no-repeat;
+  background-size: cover;
+  float: left;
+  padding-top: 57px;
+  font-size: 40px;
+}
+.play > .time {
+  width: 100px;
+  height: 47px;
+  margin: 50px 20px 0 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  background: url(../img/time.png) no-repeat;
+  background-size: contain;
+  float: right;
+  padding-top: 27px;
+  color: #0069b7;
+}
+.end {
+  background: url(../img/doraemon_bg5.png) no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.end > h2 {
+  width: 219px;
+  height: 103px;
+  text-indent: -999px;
+  margin: 50px auto 0;
+  background: url(../img/succes.png) no-repeat;
+  animation: show 1s linear 3s 1;
+}
+.end > img {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto 0;
+}
+.end > .score {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Arial;
+  color: #0069b7;
+  background: url(../img/score.png) no-repeat;
+  background-size: contain;
+  text-indent: 100px;
+}
+.end > .again {
+  border: 0;
+  width: 138px;
+  height: 34px;
+  text-indent: -9999px;
+  background: transparent url(../img/retry.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  top: 496px;
+  margin-left: -69px;
+}
+@keyframes show {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

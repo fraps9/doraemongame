@@ -1,0 +1,66 @@
+@import "reset.css";
+
+section,
+      body,
+      h1,
+      span,
+      button {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      #wrapper {
+        width: 100%;
+        height: 100%;
+        background: url(../img/doraemon_bg.png) no-repeat left bottom;
+        background-size: cover;
+      }
+      #wrapper > h1 {
+        position: absolute;
+        width: 231px;
+        height: 110px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        text-indent: -9999px;
+        background: url(../img/doraemon_logo.png) no-repeat;
+        background-size: contain;
+      }
+      #wrapper > h1 > span {
+        width: 107px;
+        height: 57px;
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translateX(-50%);
+        background: url(../img/catch.png) no-repeat;
+        background-size: contain;
+      }
+      #wrapper > .start {
+        width: 233px;
+        height: 52px;
+        text-indent: -9999px;
+        border: 0;
+        background: transparent url(../img/gamestart.png) no-repeat;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        animation: moving 1s linear 0s infinite;
+        transition: 0.4s;
+      }
+      @keyframes moving {
+        0% {
+          transform: translateX(-50%) scale(1);
+        }
+        50% {
+          transform: translateX(-50%) scale(1.1);
+        }
+        100% {
+          transform: translateX(-50%) scale(1);
+        }
+      }
